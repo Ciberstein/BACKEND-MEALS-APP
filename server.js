@@ -9,7 +9,7 @@ db.authenticate()
 
 initModel();
 
-db.sync()
+db.sync({ force: true })
   .then(() => console.log("Database Synced!"))
   .catch((error) => console.log(error));
 

@@ -1,11 +1,11 @@
 const { DataTypes } = require("sequelize");
 const { db } = require("../database/config");
 
-const Meal = db.define("Meals", {
+const Meal = db.define("meals", {
   id: {
     primaryKey: true,
-    autoIncrement: true,
     type: DataTypes.INTEGER,
+    autoIncrement: true,
     allowNull: false,
   },
   name: {
@@ -22,8 +22,8 @@ const Meal = db.define("Meals", {
   },
   status: {
     type: DataTypes.ENUM("active", "disabled"),
-    allowNull: false,
     defaultValue: "active",
+    allowNull: false,
   },
 });
 
