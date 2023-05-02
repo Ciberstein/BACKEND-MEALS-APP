@@ -76,7 +76,7 @@ exports.updateOrder = catchAsync(async (req, res, next) => {
   const { order } = req;
 
   await order.update({
-    status: "Promise completed",
+    status: "completed",
   });
 
   res.status(200).json({
